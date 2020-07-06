@@ -1,0 +1,57 @@
+
+<script src="static/node_modules/chart.js/dist/Chart.js"></script>
+<script src="static/node_modules/chartjs-plugin-annotation/chartjs-plugin-annotation.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="covid.js"></script>
+
+<body>
+  <form>
+   Duration of time spent during travel (Minutes):
+   <input id="duration" type="text" value="30"><br>
+   <label for="locationInput"> Location of travel </label>
+   <select id="locationInput">
+      <option value="bts">BTS</option>
+      <option value="bus">Bus</option>
+      <option value="taxi">Taxi</option>
+      <option value="empty_mall">Empty Mall</option>
+      <option value="busy_mall">Busy mall</option>
+      <option value="park">Park</option>
+    </select>
+    <label for="selectedMask"> Selected Mask </label>
+    <select id="selectedMask">
+       <option value="noMask">No Mask</option>
+       <option value="clothMask">Cloth Mask</option>
+       <option value="n95">N95</option>
+     </select>
+
+    <input type="button" value="Add data" onclick="adddataCovid()">
+  </form>
+  <canvas id="myChart" width="400" height="400"></canvas>
+  <script>
+
+  //////////////////////////////////////////////////////
+  //global variables
+  //////////////////////////////////////////////////////
+
+  var myChart;
+  var data;
+  var maskTypesString = getMaskTypes();
+  var defaultLocation = 'bts';
+  var defaultDuration = 30;
+
+  var bestCase = 'rgba(0,192,0, 1)';
+  var worstCase = 'rgba(192,192,192)';
+
+  //////////////////////////////////////////////////////
+  //call functions here when open html
+  //////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////
+//call functions here when open html
+//////////////////////////////////////////////////////
+
+  initCovid();
+
+  </script>
+</body>
