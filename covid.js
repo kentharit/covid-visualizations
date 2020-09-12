@@ -121,6 +121,7 @@ function adddataCovid() {
 
   //update color
   myChart.data.datasets[0].backgroundColor[indexOfMask] = 'rgba(0,192,0, 1)';
+  console.log("Color: " + myChart.data.datasets[0].backgroundColor[indexOfMask])
 
   //update healthy
   console.log("Minimum droplets to get infected: " + minDropletsToGetInfected )
