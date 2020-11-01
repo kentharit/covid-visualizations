@@ -135,6 +135,9 @@ function initCovid() {
   var maskTypesString = maskTypesStringToMaskTypes(getMaskTypes());
   var ctx = document.getElementById('myChart');
   data = dropletsPerMask(defaultDuration, defaultLocation);
+
+  Chart.defaults.global.defaultFontSize = 17;
+  Chart.defaults.global.defaultFontColor = '#000000';
   console.log(data);
   console.log("Mask Types:" + maskTypesString);
   console.log(maskTypesString[0]);
@@ -161,6 +164,11 @@ function initCovid() {
             }
           ]},
       options: {
+        title: {
+            display: true,
+            text: 'Total Germ Droplets Exposed to for Each Mask Type (Microgram)',
+            fontSize: 20
+        },
         annotation: {
           annotations: [{
             type: 'line',
