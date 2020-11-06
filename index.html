@@ -79,15 +79,16 @@
             <!-- <p style="font-size:30">Research Conclusions:</p> -->
             <p> Assumptions from research:</p>
             <ul>
-              <li> Assumed that the ratio of inhaled germ particles is modeled by the linear equation y = <sup>x</sup>&frasl;<sub>2</sub> + 1, where <i> y </i> is the ratio of germ particles inhaled, and <i> x </i> is the distance between the person who coughed and the person exposed to that cough. Therefore, according to thise model's assumption, a man exposed to a cough that is more than 2 meters away from himself is exposed to zero cough droplets from that cough (as negative droplets exposed is impossible). </li>
-              <li> Assumed that wind speed in the immediate environment is close to zero. If the wind speed is more than zero, it could change the maximum transmissible distance of the coughed germ particles by providing them with a higher or lower initial velocity depending on the direction the wind is blowing (SOURCE). </li>
-              <li> Assumed that minimum droplets to get infected is equivalent to the average quantity of germ droplets for each cough released by an average person: 151550 droplets (SOURCE). </li>
+              <li> Assumed that the ratio of inhaled germ particles is modeled by the linear equation Y = <sup>X</sup>&frasl;<sub>2</sub> + 1, and will be below. According to thise model's assumption, a man exposed to a cough that is more than 2 meters away from himself is exposed to zero cough droplets from that cough (as negative droplets exposed is impossible). </li>
+              <li> Assumed that wind speed in the immediate environment is close to zero. If the wind speed is more than zero, it could change the maximum transmissible distance of the coughed germ particles by providing them with a higher or lower initial velocity depending on the direction the wind is blowing (Pendar, 2020). </li>
+              <li> Assumed that minimum droplets to get infected is equivalent to the average quantity of germ droplets for each cough released by an average person: 151550 droplets. </li>
               <li> Assumed that an average person coughs exactly once per minute. </li>
               <li> Best Case: 1 out of 10 people in your surroudings is infected. </li>
               <li> Worst Case: 5 out of 10 people in your surroudings is infected. </li>
               <li> Cloth Mask reduces inhaled germ particles by 15% (Cherrie, 2018).</li>
               <li> N95 Mask reduces inhaled germ particles by 95% (Cherrie, 2018).</li>
             </ul>
+
             <p> Assumptions from real-life observations:</p>
             <ul>
               <li> For BTS, average distance between passengers is 1 meter, and every passenger has 10 other people that are each less than 2 meters away. </li>
@@ -97,7 +98,29 @@
               <li> For Busy Mall, average distance between customers is 0.5 meters, and each customer has 3 other people that are each less than 2 meters away. </li>
               <li> For Park, average distance between civilians is 5 meters, and each civilian has 1 person that is less than 2 meters away. </li>
             </ul>
-            
+            <p> The following self-devised formula is a piecewise equation used to find the exposure index. The index ranges from 0 to 1, denoting the <b> proportion </b> of total cough droplets exposed:</p>
+      </div class='row content'>
+      <div class='row content'>
+          <img src="./img/f1.jpeg" alt="Formula 1" width="309" height="123">
+          <ul>
+              <li> Where <i> Y </i> is exposure index </li>
+              <li> <i> X </i> is the average distance from other people in the chosen location in meters </li>
+              <li> <i> X </i> cannot be larger than 2 otherwise total droplets exposed will be negative </li>
+              <li> <i> X </i> cannot be less than 0 because distance is a scalar quantity that is never negative </li>
+          </ul>
+          <p> The following self-devised formula is used to calculate the total droplets exposed. Assumed a proportional relationship between <i> D </i> and <i>S, L, Y, P</i>, and an inversely proportional relationship between <i> D </i> and <i> C </i>:</p>
+      </div class='row content'>
+      <div class='row content'>
+          <img src="./img/f2.png" alt="Formula 2" width="240" height="60">
+          <ul>
+              <li> Where <i> D </i> is total droplets exposed </li>
+              <li> <i> T </i> is the time of exposure </li>
+              <li> <i> S </i> is the sick people ratio (depends on best or worst case) </li>
+              <li> <i> L </i> is the quantity of other people within the vicinity of two meters, corresponding to the chosen location </li>
+              <li> <i> Y </i> is the exposure index </li>
+              <li> <i> P </i> is the total droplets released per cough </li>
+              <li> <i> C </i> is how many times an average person coughs every minute </li>
+          </ul>
       </div class='row content'>
       <div class='row content'>
           <h3>  &nbsp </h3>
@@ -112,6 +135,11 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Effectiveness of face masks used to protect Beijing residents against particulate air <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pollution. Retrieved July 25, 2020, from <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5969371/ </p>    
+      </div class='row content'>
+      <div class='row content' style="margin-left: 250px ">
+            <p> Pendar, M., & Páscoa, J. (2020, August 01). Numerical modeling of the distribution of virus <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; carrying saliva droplets during sneeze and cough. Retrieved November 06, 2020, from <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; https://aip.scitation.org/doi/10.1063/5.0018432 <br></p>    
       </div class='row content'>
 
   </div class='container'>
